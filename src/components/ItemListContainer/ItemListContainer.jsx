@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 export const ItemListContainer = ({saludo}) => {
   return (
-    <div>{saludo}</div>
+    <div className="saludo">{saludo}</div>
   )
 }

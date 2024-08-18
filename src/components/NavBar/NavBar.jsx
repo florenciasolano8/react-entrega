@@ -1,16 +1,23 @@
 import { CartWidget } from "../CartWidget/CartWidget"
+import "./navBar.css"
+import logo from "../../assets/logo.png"
 
 export const NavBar = () => {
   return (
-    <nav>
-        <div>🍬</div>
+    <div className="header">
+      <div className="container-logo">
+        <img src={logo} alt="logo" className="logo" />
+        <p className="nombre-logo">Candys</p>
+        </div>
+        <nav>
         <ul>
-            <li>link1</li>
-            <li>link2</li>
-            <li>link3</li>
+            <li><a href ="link1">link1</a></li>
+            <li><a href ="link2">link2</a></li>
+            <li><a href ="link3">link3</a></li>
         </ul>
-        <CartWidget/>
     </nav>
+        <CartWidget/>
+    </div>
 
 )
 }
