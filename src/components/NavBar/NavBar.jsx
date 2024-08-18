@@ -16,7 +16,10 @@ export const NavBar = () => {
             <li><a href ="link3">link3</a></li>
         </ul>
     </nav>
+    <div className="carrito-producto">
+    <p className="numero-producto">4</p>
         <CartWidget/>
+    </div>
     </div>
 
 )
