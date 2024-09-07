@@ -2,7 +2,6 @@ import './App.css'
 import { NavBar } from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemCount from './components/ItemCount/ItemCount' 
-import {Home} from './components/Home/Home'
 
 import{
   BrowserRouter,
@@ -16,11 +15,9 @@ function App() {
     <>
 <BrowserRouter>
 <NavBar/>
-<ItemListContainer/>
-
 
 <Routes>
-<Route path="/" element={<Home/>} />
+<Route path="/" element={<ItemListContainer/>} />
 
 </Routes>
 </BrowserRouter>
