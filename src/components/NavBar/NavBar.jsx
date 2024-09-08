@@ -15,6 +15,7 @@ export const NavBar = () => {
       </div>
       <nav>
         <ul>
+        <li><Link to={`/`}>Todo</Link></li>
           <li><Link to={`category/Electronics`}>Electronicos</Link></li>
           <li><Link to={`category/Movies`}>Peliculas</Link></li>
           <li><Link to={`category/Toys`}>Juguetes</Link></li>
