@@ -1,9 +1,9 @@
-import { CartWidget } from "../CartWidget/CartWidget";
-import "./navBar.css";
-import logo from "../../assets/logo.png";
-import { Link } from "react-router-dom";
+import  CartWidget  from "../CartWidget/CartWidget"
+import "./navBar.css"
+import logo from "../../assets/logo.png"
+import { Link } from "react-router-dom"
 
-export const NavBar = () => {
+const NavBar = () => {
 
   return (
     <div className="header">
@@ -28,5 +28,6 @@ export const NavBar = () => {
         <CartWidget />
       </div>
     </div>
-  );
-};
+  )
+}
+export default NavBar

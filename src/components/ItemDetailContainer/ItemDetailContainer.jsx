@@ -2,7 +2,7 @@ import {useState,useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import ItemDetail from '../ItemDetail/ItemDetail'
 
-export function ItemDetailContainer() {
+ function ItemDetailContainer(){
   const[detail, setDetail] = useState()
 
   const {id} = useParams()
@@ -16,3 +16,4 @@ export function ItemDetailContainer() {
     <ItemDetail detail={detail}/>
   )
 }
+export default ItemDetailContainer
