@@ -17,8 +17,8 @@ function Item ({item}){
                     <p>{item.category}</p>
 
                     <Card.Text>{item.description}</Card.Text>
-                    <Button variant="primary" as={Link} to={`/product/${item.id}`}>more info</Button>
                     <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada ',quantity)}/>
+                    <Button variant="danger" as={Link} to={`/product/${item.id}`}>more info</Button>
                         
                 </Card.Body>
 

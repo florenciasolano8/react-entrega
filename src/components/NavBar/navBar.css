@@ -1,5 +1,5 @@
 #root{
-    margin-bottom:640px;
+    margin-bottom:100px;
     padding: 0;
     width: 100%;
 }
@@ -23,12 +23,12 @@ margin:0;
 
 }
 .logo{
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
 }
 .nombre-logo{
     margin-top:-40px;
-    font-size: 30px;
+    font-size: 25px;
 }
 .saludo{
 background-color: red;
@@ -43,6 +43,7 @@ nav {
     ul {
         list-style-type: none;
         margin-right: 120px;
+        margin-top: 15px;
 
         li {
                 margin: 40px;
@@ -69,6 +70,7 @@ nav {
 }
 
 .numero-producto{
+    margin-top: 20px;
     font-size: 25px;
     font-weight: bold;
     
