@@ -2,6 +2,10 @@
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
+import { Link } from 'react-router-dom'
+import ItemCount from '../ItemCount/ItemCount';
+
+
 
 function Item ({item}){
     return(
@@ -10,9 +14,12 @@ function Item ({item}){
                 <Card.Img variant="top" src={item.image}/>
                 <Card.Body>
                     <Card.Title>{item.name}</Card.Title>
-                    <Card.Text>{item.description}</Card.Text>
-                    <Button variant="primary">more info</Button>
+                    <p>{item.category}</p>
 
+                    <Card.Text>{item.description}</Card.Text>
+                    <Button variant="primary" as={Link} to={`/product/${item.id}`}>more info</Button>
+                    <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada ',quantity)}/>
+                        
                 </Card.Body>
 
             </Card>
