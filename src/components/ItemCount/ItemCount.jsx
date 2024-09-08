@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import {useState} from 'react' 
+import "./itemCount.css"
+
 
 const ItemCount =({stock,initial,onAdd}) => {
     const [quantity,setQuantity] = useState(initial)
@@ -18,14 +20,14 @@ const ItemCount =({stock,initial,onAdd}) => {
     };
 
     return(
-        <div className='Counter'>
-            <div>
-                <button onClick={decrement}>-</button>
+        <div>
+            <div className='contador'>
+                <button className='botondecr' onClick={decrement}>-</button>
                 <h4>{quantity}</h4>
-                <button onClick={increment}>+</button>
+                <button className='botonincr' onClick={increment}>+</button>
             </div>
         <div>
-        <button onClick={() => onAdd(quantity)} disabled={!stock}>
+        <button className='agregaralcarro' onClick={() => onAdd(quantity)} disabled={!stock}>
         Agregar al carrito</button>
         </div>
         </div>

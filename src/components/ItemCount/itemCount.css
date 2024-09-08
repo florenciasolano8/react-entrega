@@ -1,0 +1,18 @@
+.contador{
+display: flex;
+flex-direction: row;
+align-items: center;
+margin-left: 35px;
+}
+
+.agregaralcarro{
+    margin-top: 10px;
+}
+
+.botondecr{
+margin-right: 10px;
+}
+.botonincr{
+    margin-left: 10px;
+    }
+    
