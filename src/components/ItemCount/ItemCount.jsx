@@ -1,37 +1,21 @@
 /* eslint-disable react/prop-types */
-import {useState} from 'react' 
-import "./itemCount.css"
+import {useState} from "react"
+import { useCartContext } from "../../context/cartContext"
 
+function ItemCount ({prod}){
+    const [count, setCount] = useState(1)
+    const {addToCart} = useCartContext()
 
-const ItemCount =({stock,initial,onAdd}) => {
-    const [quantity,setQuantity] = useState(initial)
-
-    const increment = ()=>{
-        if(quantity < stock){
-            setQuantity(quantity+1)
-        }
-    };
-    
-    const decrement = () =>{
-
-        if(quantity > 1){
-            setQuantity(quantity - 1)
-        }
-    };
+    const add = () => setCount(count + 1)
+    const subtract = () => setCount(count - 1)
 
     return(
         <div>
-            <div className='contador'>
-                <button className='botondecr' onClick={decrement}>-</button>
-                <h4>{quantity}</h4>
-                <button className='botonincr' onClick={increment}>+</button>
-            </div>
-        <div>
-        <button className='agregaralcarro' onClick={() => onAdd(quantity)} disabled={!stock}>
-        Agregar al carrito</button>
-        </div>
+            <p>{count}</p>
+        <button onClick={add}>+</button>
+        <button onClick= {subtract}> -</button> 
+        <button onClick={()=> addToCart({...prod,quantity:count})}>add to cart</button>
         </div>
     )
 }
-
 export default ItemCount

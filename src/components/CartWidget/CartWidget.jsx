@@ -1,8 +1,14 @@
-import carrito from "../../assets/carrito.png"
+import Badge from "react-bootstrap/Badge"
+import Button from "react-bootstrap/Button"
+import { useCartContext } from "../../context/cartContext"
+import { Link } from "react-router-dom"
 
  const CartWidget = () => {
+  const {cart} = useCartContext()
   return (
-    <img src={carrito}  alt="carrito" className="carrito"/>
+    <Button as={Link} to="/cart">
+      Cart <Badge bg="secondary">{cart.length}</Badge>
+    </Button>
   )
 }
 export default CartWidget
