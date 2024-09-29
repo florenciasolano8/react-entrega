@@ -1,9 +1,14 @@
-# Segunda entrega 
-# React + Vite
+# Ecommerce "LaLibre" 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Agrega productos al carrito
+- Creea la orden de compra
+- Se finaliza la orden de compra
+- Filtra por categorias
+
+## El proyecto tiene las siguientes dependecias:
+
+- [React](https://reactjs.org/)
+- [Firebase](https://firebase.google.com/)

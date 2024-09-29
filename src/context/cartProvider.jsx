@@ -12,9 +12,9 @@ function CartProvider ({children}){
         const total = prices.reduce((acc, current)=> acc + current, 0)
         return total
     }
-
+    const clearCart = () => setCart([])
   return (
-    <cartContext.Provider value= {{cart, addToCart, getTotal}}>
+    <cartContext.Provider value= {{cart, addToCart, getTotal, clearCart}}>
         {children}
     </cartContext.Provider>    
   )
