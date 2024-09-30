@@ -4,7 +4,6 @@ import Button from "react-bootstrap/Button"
 import Card from "react-bootstrap/Card"
 import Col from "react-bootstrap/Col"
 import { Link } from "react-router-dom"
-import ItemCount from "../ItemCount/ItemCount"
 
 function Item({ item }) {
   return (
@@ -16,11 +15,7 @@ function Item({ item }) {
           <p>{item.category}</p>
 
           <Card.Text>{item.description}</Card.Text>
-          <ItemCount
-            initial={1}
-            stock={10}
-            onAdd={(quantity) => console.log("Cantidad agregada ", quantity)}
-          />
+          
           <Button
             className="moreinfo"
             variant="danger"

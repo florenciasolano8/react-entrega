@@ -9,8 +9,21 @@ function ItemListContainer() {
   const [items, setItems] = useState([])
   const { id } = useParams()
 
+
   useEffect(() => {
-    getProducts(setItems)
+    const filterProducts = async () => {
+      const allProducts = await getProducts()
+      if (id) {
+        const filteredProducts = allProducts.filter(prod => {
+          return prod.category && prod.category.trim().toLowerCase() === id.trim().toLowerCase();
+        })
+        setItems(filteredProducts);
+      } else {
+        setItems(allProducts)
+      }
+    }
+
+    filterProducts();
   }, [id])
 
   return (

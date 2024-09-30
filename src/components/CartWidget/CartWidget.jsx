@@ -6,8 +6,8 @@ import { Link } from "react-router-dom"
 const CartWidget = () => {
   const { getTotalItems } = useCartContext()
   return (
-    <Button as={Link} to="/cart">
-      Cart <Badge bg="secondary">{getTotalItems()}</Badge>
+    <Button as={Link} to="/cart" variant="danger"> 
+      🛒 Cart <Badge bg="danger">{getTotalItems()}</Badge>
     </Button>
   )
 }

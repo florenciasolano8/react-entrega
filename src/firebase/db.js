@@ -10,7 +10,7 @@ import { app } from "./config"
 
 const db = getFirestore(app)
 
-export const getProducts = async (setItems) => {
+export const getProducts = async () => {
   const querySnapshot = await getDocs(collection(db, "items"))
   const products = []
 
@@ -18,7 +18,7 @@ export const getProducts = async (setItems) => {
     products.push({ id: doc.id, ...doc.data() })
   })
 
-  setItems(products)
+  return products
 }
 
 export const getSingleProduct = async (id, setItem) => {

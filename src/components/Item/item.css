@@ -5,3 +5,7 @@ background-color: #f1d0d6 !important
 .moreinfo{
     margin-top: 10px
 }
+.cards img {
+    max-width: 300px; 
+    max-height: 200px; 
+  }

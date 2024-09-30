@@ -103,10 +103,12 @@ function CheckoutData() {
 function MainComponent() {
   const [showModal, setShowModal] = useState(false)
   const [orderId, setOrderId] = useState(null)
+  const {clearCart} = useCartContext()
 
   const handleOrderComplete = (id) => {
     setOrderId(id)
     setShowModal(true)
+    clearCart()
   }
 
   const handleCloseModal = () => setShowModal(false)

@@ -57,18 +57,13 @@ nav {
   }
 }
 
-.carrito-producto {
-  display: flex;
-  flex-direction: row;
-}
-
-.carrito {
-  height: 60px;
-  margin-top: 15px;
-}
 
 .numero-producto {
   margin-top: 20px;
   font-size: 25px;
   font-weight: bold;
+}
+.active {
+  font-weight: bold;
+  color: rgb(255, 0, 85);
 }

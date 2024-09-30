@@ -3,10 +3,10 @@
 
 ## Funcionalidades
 
+- Filtra por categorias
 - Agrega productos al carrito
 - Creea la orden de compra
 - Se finaliza la orden de compra
-- Filtra por categorias
 
 ## El proyecto tiene las siguientes dependecias:
 

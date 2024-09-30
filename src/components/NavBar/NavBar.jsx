@@ -1,37 +1,42 @@
 import CartWidget from "../CartWidget/CartWidget"
 import "./navBar.css"
 import logo from "../../assets/logo.png"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <div className="header">
       <div className="container-logo">
-        <Link to="/">
+        <NavLink to="/">
           <img src={logo} alt="logo" className="logo" />
-        </Link>
-        <p className="nombre-logo">Candys</p>
+        </NavLink>
+        <p className="nombre-logo">CanLib</p>
       </div>
       <nav>
         <ul>
           <li>
-            <Link to={`/`}>Todo</Link>
+            <NavLink to={`/`} className={({isActive})=> (isActive ? 'active' : '')}>
+            Todo</NavLink>
           </li>
           <li>
-            <Link to={`category/Electronics`}>Electronicos</Link>
+            <NavLink to={`category/Resaltadores`}
+            className={({isActive})=> (isActive ? 'active' : '')}>Resaltadores</NavLink>
           </li>
           <li>
-            <Link to={`category/Movies`}>Peliculas</Link>
+            <NavLink to={`category/Cuadernos`}
+            className={({isActive})=> (isActive ? 'active' : '')}>Cuadernos</NavLink>
           </li>
           <li>
-            <Link to={`category/Toys`}>Juguetes</Link>
+            <NavLink to={`category/Lapiceras`}
+            className={({isActive})=> (isActive ? 'active' : '')}>Lapiceras</NavLink>
           </li>
           <li>
-            <Link to={`category/Beauty`}>Belleza</Link>
+            <NavLink to={`category/Lapices`}
+            className={({isActive})=> (isActive ? 'active' : '')}>Lapices</NavLink>
           </li>
         </ul>
       </nav>
-      <div className="carrito-producto">
+      <div>
         <CartWidget />
       </div>
     </div>
