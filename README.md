@@ -1,4 +1,4 @@
-# Ecommerce "LaLibre" 
+# Ecommerce "CanLib" 
 
 
 ## Funcionalidades
