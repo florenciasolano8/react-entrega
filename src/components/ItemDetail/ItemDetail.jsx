@@ -2,15 +2,14 @@
 import ItemCount from "../ItemCount/ItemCount"
 
 function ItemDetail({ detail }) {
-
-    return (
-        <div>
-            <p>{detail?.name}</p>
-            <p>{detail?.price}</p>
-            <p>{detail?.description}</p>
-            <ItemCount prod={detail}/>
-        </div>
-    );
+  return (
+    <div>
+      <p>{detail?.name}</p>
+      <p>{detail?.price}</p>
+      <p>{detail?.description}</p>
+      <ItemCount prod={detail} />
+    </div>
+  )
 }
 
-export default ItemDetail;
+export default ItemDetail

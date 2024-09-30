@@ -3,11 +3,11 @@ import Button from "react-bootstrap/Button"
 import { useCartContext } from "../../context/cartContext"
 import { Link } from "react-router-dom"
 
- const CartWidget = () => {
-  const {cart} = useCartContext()
+const CartWidget = () => {
+  const { getTotalItems } = useCartContext()
   return (
     <Button as={Link} to="/cart">
-      Cart <Badge bg="secondary">{cart.length}</Badge>
+      Cart <Badge bg="secondary">{getTotalItems()}</Badge>
     </Button>
   )
 }

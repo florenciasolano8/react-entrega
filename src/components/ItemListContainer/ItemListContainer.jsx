@@ -1,28 +1,24 @@
-import { useEffect,useState } from "react"
-import ItemList from '../ItemList/ItemList'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
+import { useEffect, useState } from "react"
+import ItemList from "../ItemList/ItemList"
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
 import { useParams } from "react-router-dom"
 import { getProducts } from "../../firebase/db"
 
-function ItemListContainer(){
+function ItemListContainer() {
+  const [items, setItems] = useState([])
+  const { id } = useParams()
 
-   const [items,setItems] = useState([])
-   const {id} = useParams()
-
-    useEffect(()=>{
-      
+  useEffect(() => {
     getProducts(setItems)
-   },[id])
-   
-  
-   return(
-    <Container className='p-3'>
+  }, [id])
+
+  return (
+    <Container className="p-3">
       <Row>
         <ItemList items={items} />
       </Row>
-      
-    </Container>   
-   )
+    </Container>
+  )
 }
 export default ItemListContainer

@@ -1,77 +1,74 @@
-#root{
-    margin-bottom:700px;
-    padding: 0;
-    width: 100%;
+#root {
+  margin-bottom: 700px;
+  padding: 0;
+  width: 100%;
 }
-.body{
-align-items: center;
-display: flex;
-flex-direction: column;
-margin:0;
+.body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    margin-top: 20px;
-    border-bottom: 1px solid #111a24;
-    background-color: pink;
-    margin:0;
-    padding: 0;
-    width: 100%;
-
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
+  border-bottom: 1px solid #111a24;
+  background-color: pink;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
-.logo{
-    width: 100px;
-    height: 100px;
+.logo {
+  width: 100px;
+  height: 100px;
 }
-.nombre-logo{
-    margin-top:-40px;
-    font-size: 25px;
+.nombre-logo {
+  margin-top: -40px;
+  font-size: 25px;
 }
-.saludo{
-background-color: red;
-font-size: 25px;
-
+.saludo {
+  background-color: red;
+  font-size: 25px;
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    ul {
-        list-style-type: none;
-        margin-right: 120px;
-        margin-top: 15px;
-
-        li {
-                margin: 40px;
-                display: inline;
-            }
-            a{
-                font-size: 20px;
-                text-decoration: none;
-                transition: 1s;
-                font-weight: bold;
-                color:black;
-            }
-            }
-        }
-
-.carrito-producto{
-    display: flex;
-    flex-direction: row;
-}
-
-.carrito{
-    height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ul {
+    list-style-type: none;
+    margin-right: 120px;
     margin-top: 15px;
+
+    li {
+      margin: 40px;
+      display: inline;
+    }
+    a {
+      font-size: 20px;
+      text-decoration: none;
+      transition: 1s;
+      font-weight: bold;
+      color: black;
+    }
+  }
 }
 
-.numero-producto{
-    margin-top: 20px;
-    font-size: 25px;
-    font-weight: bold;
-    
-    }
+.carrito-producto {
+  display: flex;
+  flex-direction: row;
+}
+
+.carrito {
+  height: 60px;
+  margin-top: 15px;
+}
+
+.numero-producto {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
