@@ -79,13 +79,16 @@ function FormCheckout({ onOrderComplete }) {
 }
 
 function CheckoutData() {
-  const { cart, clearCart } = useCartContext()
+  const { cart, clearCart, removeFromCart } = useCartContext()
 
   return (
     <ListGroup>
       {cart.map((item) => (
         <ListGroup.Item key={item.id}>
           {item.name} x {item.quantity}u.
+          <Button variant="danger" onClick={() => removeFromCart(item.id)} >
+            ❌
+          </Button> 
         </ListGroup.Item>
       ))}
       {cart.length > 0 && (
