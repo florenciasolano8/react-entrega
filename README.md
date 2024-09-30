@@ -13,5 +13,4 @@
 - [React](https://reactjs.org/)
 - [Firebase](https://firebase.google.com/)
 
-## vercel
-- [Mi proyecto en Vercel](react-entrega-32qzjure1-florenciasolano8s-projects.vercel.app)
+
