@@ -10,6 +10,8 @@ import { useCartContext } from "../context/cartContext"
 import { createOrder } from "../firebase/db"
 import { serverTimestamp } from "firebase/firestore"
 import { Modal } from "react-bootstrap"
+import "./checkout.css"
+
 
 function FormCheckout({ onOrderComplete }) {
   const { cart, getTotal } = useCartContext()
@@ -73,24 +75,26 @@ function FormCheckout({ onOrderComplete }) {
         </Form.Group>
       </Row>
 
-      <Button type="submit">Finalizar Compra</Button>
+      <Button variant="danger" type="submit">Finalizar Compra</Button>
     </Form>
   )
 }
 
 function CheckoutData() {
-  const { cart, clearCart, removeFromCart } = useCartContext()
+  const { cart, clearCart, removeFromCart,getTotal } = useCartContext()
 
   return (
     <ListGroup>
       {cart.map((item) => (
         <ListGroup.Item key={item.id}>
           {item.name} x {item.quantity}u.
-          <Button variant="danger" onClick={() => removeFromCart(item.id)} >
-            ❌
+          <Button  variant="danger" onClick={() => removeFromCart(item.id)} >
+            x
           </Button> 
         </ListGroup.Item>
+
       ))}
+      <p>Total: ${getTotal()}</p>
       {cart.length > 0 && (
         <Button variant="danger" onClick={clearCart}>
           Vaciar Carrito
@@ -116,11 +120,11 @@ function MainComponent() {
   return (
     <Row>
       <Col md={6}>
-        <h2>Resumen de Compra</h2>
+        <h2 className="titulo">Resumen de Compra</h2>
         <CheckoutData />
       </Col>
       <Col md={6}>
-        <h2>Datos para la compra</h2>
+        <h2 className="titulo">Datos para la compra</h2>
         <FormCheckout onOrderComplete={handleOrderComplete} />
       </Col>
 
